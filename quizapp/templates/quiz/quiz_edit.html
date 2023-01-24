@@ -1,0 +1,29 @@
+{% extends 'quiz/base.html'%}
+{%block content%}
+
+<h1 class="quizhead">Edit Quiz</h1>
+    <ul class="quizlist">
+    {% for q in question_scq %}
+        <li class="quizblock"><a href="scq/{{q.id}}/">{{ q.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+    <ul class="quizlist">
+        {% for q in question_mcq %}
+            <li class="quizblock"><a href="mcq/{{q.id}}/">{{ q.question_text }}</a></li>
+            
+        {% endfor %}
+        </ul>
+        <ul class="quizlist">
+            {% for q in question_int %}
+                <li class="quizblock"><a href="int/{{q.id}}/">{{ q.question_text }}</a></li>
+                    
+            {% endfor %}
+            </ul>
+            <ul >
+                {% for q in question_bool %}
+                    <li class="quizblock"><a href="bool/{{q.id}}/">{{ q.question_text }}</a></li>
+                {% endfor %}
+                </ul>
+
+
+{%endblock%}
